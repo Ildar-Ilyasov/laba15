@@ -1,9 +1,9 @@
 import java.io.Serializable;
 
-public class function implements Serializable {
+public class virajenie implements Serializable {
     double x;
     double y;
-    function(double x){
+    virajenie(double x){
         this.x=x;
     }
     void count(){

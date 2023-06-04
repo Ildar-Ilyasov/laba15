@@ -9,9 +9,9 @@ public class Main {
             String coms = in.next();
             if (Objects.equals(coms, "save")){
                 try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("result.txt"))) {
-                    function urav = new function(in.nextInt());
-                    urav.count();
-                    oos.writeObject(urav);
+                    virajenie x = new virajenie(in.nextInt());
+                    x.count();
+                    oos.writeObject(x);
                 }
                 catch (IOException ex) {
                     System.out.println(ex.getMessage());
@@ -20,7 +20,7 @@ public class Main {
             }
             else if (Objects.equals(coms, "upload")){
                 try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("result.txt"))) {
-                    function calc = (function)ois.readObject();
+                    virajenie calc = (virajenie)ois.readObject();
                     System.out.println("y=" + calc.y);
                 } catch (Exception ex) {
                     System.out.println(ex.getMessage());
